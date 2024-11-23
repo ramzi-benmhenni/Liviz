@@ -1,0 +1,1600 @@
+
+Question 1: Is 2% or less alkali compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 2: Is 2% or less alkali compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 3: Is 2% or less alkali compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 4: Is 2% or less of alkali compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 5: Is 2% or less of alkali compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 6: Is 2% or less of alkali compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 7: Is acetic acid compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 8: Is acetic acid compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 9: Is acetic acid compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 10: Is acetylated distarch adipate compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 11: Is acetylated distarch adipate compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 12: Is acetylated distarch adipate compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 13: Is acetylated distarch phosphate compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 14: Is acetylated distarch phosphate compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 15: Is acetylated distarch phosphate compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 16: Is acetylated starch compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 17: Is acetylated starch compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 18: Is acetylated starch compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 19: Is acid compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 20: Is acid compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 21: Is acid compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 22: Is acid calcium pyrophosphate compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 23: Is acid calcium pyrophosphate compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 24: Is acid calcium pyrophosphate compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 25: Is acid regulator compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 26: Is acid regulator compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 27: Is acid regulator compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 28: Is acid sodium aluminium phosphate compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 29: Is acid sodium aluminium phosphate compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 30: Is acid sodium aluminium phosphate compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 31: Is acidifiers: citric acid, tartaric acid compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 32: Is acidifiers: citric acid, tartaric acid compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 33: Is acidifiers: citric acid, tartaric acid compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 34: Is acidity regulator (potassium carbonate) compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 35: Is acidity regulator (potassium carbonate) compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 36: Is acidity regulator (potassium carbonate) compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 37: Is acidity regulator (sodium carbonate) compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 38: Is acidity regulator (sodium carbonate) compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 39: Is acidity regulator (sodium carbonate) compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 40: Is acidity regulator (sodium citrates) compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 41: Is acidity regulator (sodium citrates) compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 42: Is acidity regulator (sodium citrates) compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 43: Is acidity regulator (sodium phosphates) compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 44: Is acidity regulator (sodium phosphates) compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 45: Is acidity regulator (sodium phosphates) compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 46: Is acidity regulator: sodium citrates compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 47: Is acidity regulator: sodium citrates compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 48: Is acidity regulator: sodium citrates compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 49: Is acidity regulators compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 50: Is acidity regulators compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 51: Is acidity regulators compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 52: Is acidity regulators compatible with a gluten free diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 53: Is acidulants (citric acid, tartaric acid) compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 54: Is acidulants (citric acid, tartaric acid) compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: error
+  - GROQ: yes
+--------------------------------------------------
+
+Question 55: Is acidulants (citric acid, tartaric acid) compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 56: Is adipic acid compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 57: Is adipic acid compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 58: Is adipic acid compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 59: Is adipic acid compatible with a gluten free diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 60: Is agar agar compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 61: Is agar agar compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 62: Is agar agar compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 63: Is alcohol compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 64: Is alcohol compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 65: Is algae beta-carotenes compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 66: Is algae beta-carotenes compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 67: Is algae beta-carotenes compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 68: Is alginic acid compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 69: Is alginic acid compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 70: Is alginic acid compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 71: Is alginic acid compatible with a gluten free diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 72: Is alkali compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 73: Is alkali compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 74: Is alkali compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 75: Is alkali processed cocoa compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 76: Is alkali processed cocoa compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 77: Is alkali processed cocoa compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 78: Is allergen information: contains milk compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 79: Is allergen information: contains milk compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 80: Is allura red ac compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 81: Is allura red ac compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 82: Is allura red ac compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 83: Is almonds compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 84: Is almonds compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 85: Is almonds compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 86: Is alpha-tocopherol compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 87: Is alpha-tocopherol compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 88: Is alpha-tocopherol compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 89: Is aluminum compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 90: Is aluminum compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 91: Is aluminum compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 92: Is aluminum compatible with a gluten free diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 93: Is aluminum octenyl succinate starch compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 94: Is aluminum octenyl succinate starch compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 95: Is aluminum octenyl succinate starch compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 96: Is aluminum sulfate compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 97: Is aluminum sulfate compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 98: Is aluminum sulfate compatible with a halal diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 99: Is amaranth compatible with a vegan diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 100: Is amaranth compatible with a vegetarian diet?
+Vraie réponse: yes
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 101: Is alcohol compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 102: Is allergen information: contains milk compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 103: Is azodicarbonamide compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 104: Is beef compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 105: Is beef compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 106: Is beef 14% compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 107: Is beef 14% compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 108: Is beef steak compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 109: Is belgian white chocolate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 110: Is bone phosphate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 111: Is bone phosphate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 112: Is bone phosphate compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 113: Is butter compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 114: Is butter oil (milk) compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 115: Is calcium guanylate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 116: Is calcium guanylate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 117: Is calcium inosinate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 118: Is calcium inosinate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 119: Is calcium ribonucleotides compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 120: Is calcium ribonucleotides compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 121: Is canned tuna compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 122: Is cheddar cheese compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 123: Is cheese powder compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 124: Is chicken compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 125: Is chicken compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 126: Is chicken breast compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 127: Is cochineal compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 128: Is cochineal compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 129: Is concentrated butter compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 130: Is concentrated dairy butter compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 131: Is concentrated milk proteins compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 132: Is copper(ii) sulfate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 133: Is copper(ii) sulfate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 134: Is copper(ii) sulfate compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 135: Is cream compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 136: Is cream (32%) compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 137: Is curd cheese compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 138: Is dairy butter compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 139: Is dha compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 140: Is dipotassium inosinate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 141: Is dipotassium inosinate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 142: Is disodium inosinate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 143: Is disodium inosinate compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 144: Is dragee milk chocolate compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 145: Is dried fish cake compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 146: Is dried fish cake compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 147: Is e1105 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 148: Is e1105 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 149: Is e120 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 150: Is e120 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 151: Is e441 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 152: Is e441 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 153: Is e441 compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 154: Is e519 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 155: Is e519 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 156: Is e519 compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 157: Is e542 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 158: Is e542 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 159: Is e542 compatible with a halal diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 160: Is e626 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 161: Is e626 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 162: Is e627 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 163: Is e627 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 164: Is e628 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 165: Is e628 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 166: Is e629 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 167: Is e629 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 168: Is e630 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 169: Is e630 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 170: Is e631 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 171: Is e631 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 172: Is e632 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 173: Is e632 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 174: Is e633 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 175: Is e633 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 176: Is e634 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 177: Is e634 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 178: Is e635 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 179: Is e635 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 180: Is e640 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 181: Is e640 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 182: Is e82 food acid compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: yes
+--------------------------------------------------
+
+Question 183: Is e904 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 184: Is e904 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: yes
+  - GROQ: no
+--------------------------------------------------
+
+Question 185: Is e913 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 186: Is e913 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 187: Is e963 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 188: Is e963 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: yes
+--------------------------------------------------
+
+Question 189: Is e966 compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 190: Is e966 compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: yes
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 191: Is egg compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 192: Is egg yolks from barn-raised chickens 13% compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 193: Is eggs compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 194: Is emmental cheese compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 195: Is epa compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 196: Is epa compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 197: Is fish compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 198: Is fish compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 199: Is flavorings compatible with a vegan diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------
+
+Question 200: Is flavorings compatible with a vegetarian diet?
+Vraie réponse: no
+Réponses des LLM:
+  - GPT: no
+  - GEMINI: no
+  - GROQ: no
+--------------------------------------------------

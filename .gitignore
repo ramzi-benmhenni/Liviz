@@ -1,5 +1,21 @@
-.venv/
+colab/
+__pycache__/
 
-training_data.jsonl
+# Fichiers Python
+*.py
+
+
+# Fichiers de configuration avec clés API
+config.py
+
+# Environnement virtuel
+.venv/
+.env/
+
+# Fichiers de données
+*.jsonl
 api_data.json
+
+# Autres
+.DS_Store
 
