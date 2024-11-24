@@ -126,12 +126,12 @@ def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
     (userValidation = true et matchValidation = false ou non existant)
     """
     ingredients_db = {}
-    # Compteurs pour les statistiques par régime
+    # Compteurs pour les statistiques par régime et par statut
     regime_counts = {
-        "vegan": 0,
-        "vegetarian": 0,
-        "halal": 0,
-        "gluten_free": 0
+        "vegan": {"total": 0, "status": {"0": 0, "1": 0, "2": 0, "111": 0, "null": 0}},
+        "vegetarian": {"total": 0, "status": {"0": 0, "1": 0, "2": 0, "111": 0, "null": 0}},
+        "halal": {"total": 0, "status": {"0": 0, "1": 0, "2": 0, "111": 0, "null": 0}},
+        "gluten_free": {"total": 0, "status": {"0": 0, "1": 0, "2": 0, "111": 0, "null": 0}}
     }
     
     for ingredient in api_data:
@@ -143,7 +143,7 @@ def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
         
         for regime in ingredient.get("regimes", []):
             regime_type = regime["type"]
-            if regime_type in ["vegan", "vegetarian", "halal", "gluten_free"]:
+            if regime_type in regime_counts:
                 # Vérifie si userValidation est True et si matchValidation est False ou n'existe pas
                 user_validation = regime.get("userValidation", False)
                 match_validation = regime.get("matchValidation")
@@ -151,14 +151,22 @@ def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
                 if user_validation and (match_validation is None or match_validation is False):
                     has_validated_regime = True
                     status = regime.get("status")
-                    status_str = str(status) if status is not None else None
+                    status_str = str(status) if status is not None else "null"
                     
                     regimes[regime_type] = {
                         "status": status_str,
                         "validated": True
                     }
-                    # Incrémenter le compteur pour ce régime
-                    regime_counts[regime_type] += 1
+                    
+                    # Incrémenter les compteurs
+                    regime_counts[regime_type]["total"] += 1
+                    
+                    # Incrémenter le compteur de statut
+                    if status_str in regime_counts[regime_type]["status"]:
+                        regime_counts[regime_type]["status"][status_str] += 1
+                    else:
+                        # Si le statut n'est pas reconnu, l'ajouter avec un compteur de 1
+                        regime_counts[regime_type]["status"][status_str] = 1
         
         if has_validated_regime:
             ingredients_db[name] = {
@@ -166,12 +174,27 @@ def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
                 "regimes": regimes
             }
     
-    print(f"\nStatistiques de validation:")
+    print("\nStatistiques détaillées de validation:")
     print(f"Nombre total d'ingrédients dans l'API: {len(api_data)}")
     print(f"Nombre d'ingrédients avec au moins un régime validé manuellement: {len(ingredients_db)}")
-    print("\nNombre d'ingrédients validés par régime:")
-    for regime, count in regime_counts.items():
-        print(f"- {regime}: {count} ingrédients")
+    
+    print("\nStatistiques par régime alimentaire:")
+    for regime, stats in regime_counts.items():
+        print(f"\n{regime.upper()}:")
+        print(f"Total d'ingrédients validés: {stats['total']}")
+        if stats['total'] > 0:
+            print("Distribution des statuts:")
+            for status, count in stats["status"].items():
+                if count > 0:  # N'afficher que les statuts qui ont des occurrences
+                    status_label = {
+                        "0": "Non compatible",
+                        "1": "Compatible",
+                        "2": "Incertain",
+                        "111": "Incertain (111)",
+                        "null": "Incertain (null)"
+                    }.get(status, f"Autre ({status})")
+                    percentage = (count / stats['total']) * 100
+                    print(f"  {status_label}: {count} ({percentage:.1f}%)")
     
     return ingredients_db
 

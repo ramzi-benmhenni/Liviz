@@ -1,0 +1,157 @@
+{
+  "gpt": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "yes": 4,
+      "no": 2,
+      "not_sure": 0
+    },
+    "model_name": "gpt-4-0613",
+    "total_tokens": {
+      "input": 316,
+      "output": 6
+    }
+  },
+  "gpt4": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "yes": 4,
+      "no": 2,
+      "not_sure": 0
+    },
+    "model_name": "gpt-4-0125-preview",
+    "total_tokens": {
+      "input": 316,
+      "output": 6
+    }
+  },
+  "gemini": {
+    "correct": 4,
+    "total": 6,
+    "responses": {
+      "yes": 1,
+      "no": 5,
+      "not_sure": 0
+    },
+    "model_name": "gemini-pro",
+    "total_tokens": {
+      "input": 0,
+      "output": 0
+    }
+  },
+  "groq": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "yes": 2,
+      "no": 4,
+      "not_sure": 0
+    },
+    "model_name": "llama3-70b-8192",
+    "total_tokens": {
+      "input": 334,
+      "output": 271
+    }
+  },
+  "agreement": 3,
+  "total_tested": 6,
+  "detailed_results": [
+    {
+      "question": "Is 2% or less alkali compatible with a vegan diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt": "yes",
+        "gpt4": "yes",
+        "gemini": "no",
+        "groq": "no"
+      }
+    },
+    {
+      "question": "Is 2% or less alkali compatible with a vegetarian diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt": "yes",
+        "gpt4": "yes",
+        "gemini": "no",
+        "groq": "yes"
+      }
+    },
+    {
+      "question": "Is 2% or less alkali compatible with a halal diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt": "yes",
+        "gpt4": "yes",
+        "gemini": "yes",
+        "groq": "yes"
+      }
+    },
+    {
+      "question": "Is alcohol compatible with a halal diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt": "no",
+        "gpt4": "no",
+        "gemini": "no",
+        "groq": "no"
+      }
+    },
+    {
+      "question": "Is allergen information: contains milk compatible with a vegan diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt": "no",
+        "gpt4": "no",
+        "gemini": "no",
+        "groq": "no"
+      }
+    },
+    {
+      "question": "Is azodicarbonamide compatible with a vegan diet?",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt": "yes",
+        "gpt4": "yes",
+        "gemini": "no",
+        "groq": "no"
+      }
+    }
+  ],
+  "agreement_analysis": {
+    "total_agreements": 3,
+    "correct_agreements": 3,
+    "agreement_cases": [
+      {
+        "question": "Is 2% or less alkali compatible with a halal diet?",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "yes",
+        "true_answer": "yes",
+        "is_correct": true
+      },
+      {
+        "question": "Is alcohol compatible with a halal diet?",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is allergen information: contains milk compatible with a vegan diet?",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      }
+    ],
+    "agreement_accuracy": 100.0,
+    "agreement_percentage": 50.0
+  }
+}
