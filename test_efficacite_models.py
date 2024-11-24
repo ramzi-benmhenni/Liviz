@@ -17,8 +17,21 @@ GROQ_API_KEY = API_KEYS["GROQ_API_KEY"]
 # Délai entre les requêtes (en secondes)
 REQUEST_DELAY = 3   
 
+def load_diets_config():
+    """Load diet descriptions from diets.json"""
+    try:
+        with open('diets.json', 'r', encoding='utf-8') as f:
+            diets = json.load(f)
+            return {diet["key"]: diet["description"] for diet in diets}
+    except Exception as e:
+        print(f"Error loading diets.json: {e}")
+        return {}
+
 class ModelTester:
     def __init__(self, models_config_path="models_config.json"):
+        # Load diets configuration
+        self.diets_config = load_diets_config()
+        
         # Charger la configuration des modèles
         with open(models_config_path, 'r') as f:
             self.models_config = json.load(f)
@@ -104,15 +117,24 @@ class ModelTester:
         return {"response": "error", "model": model_name, "tokens": {"input": 0, "output": 0}}
 
     async def query_gpt(self, instruction: str, input_text: str, model: str) -> dict:
-        """Modifié pour utiliser le client depuis self.clients"""
+        """Modified to include diet description"""
         await self.wait_for_rate_limit("gpt")
         try:
+            # Extract diet from input text (assuming format contains "diet?")
+            diet_name = input_text.split("diet?")[0].strip().split()[-1]
+            diet_description = self.diets_config.get(diet_name, "")
+            
+            # Add diet description to the prompt
+            prompt = (
+                f"{instruction}\n"
+                f"Diet Description: {diet_description}\n"
+                f"{input_text}\n"
+                "Reply with 'yes', 'no', or 'not sure'."
+            )
+            
             response = self.clients["openai"].chat.completions.create(
                 model=model,
-                messages=[{
-                    "role": "user",
-                    "content": f"{instruction}\n{input_text}\nReply with 'yes', 'no', or 'not sure'."
-                }],
+                messages=[{"role": "user", "content": prompt}],
                 temperature=0
             )
             return {
@@ -128,12 +150,22 @@ class ModelTester:
             return {"response": "error", "model": model, "tokens": {"input": 0, "output": 0}}
 
     async def query_gemini(self, instruction: str, input_text: str, model_name: str) -> dict:
-        """Modifié pour utiliser le client depuis self.clients"""
+        """Modified to include diet description"""
         await self.wait_for_rate_limit("gemini")
         try:
-            response = self.clients["gemini"].generate_content(
-                f"{instruction}\n{input_text}\nReply with 'yes', 'no', or 'not sure'."
+            # Extract diet from input text
+            diet_name = input_text.split("diet?")[0].strip().split()[-1]
+            diet_description = self.diets_config.get(diet_name, "")
+            
+            # Add diet description to the prompt
+            prompt = (
+                f"{instruction}\n"
+                f"Diet Description: {diet_description}\n"
+                f"{input_text}\n"
+                "Reply with 'yes', 'no', or 'not sure'."
             )
+            
+            response = self.clients["gemini"].generate_content(prompt)
             return {
                 "response": self.clean_response(response.text),
                 "model": "gemini-pro",
@@ -144,15 +176,24 @@ class ModelTester:
             return {"response": "error", "model": model_name, "tokens": {"input": 0, "output": 0}}
 
     async def query_groq(self, instruction: str, input_text: str, model_name: str) -> dict:
-        """Modifié pour utiliser le client depuis self.clients"""
+        """Modified to include diet description"""
         await self.wait_for_rate_limit("groq")
         try:
+            # Extract diet from input text
+            diet_name = input_text.split("diet?")[0].strip().split()[-1]
+            diet_description = self.diets_config.get(diet_name, "")
+            
+            # Add diet description to the prompt
+            prompt = (
+                f"{instruction}\n"
+                f"Diet Description: {diet_description}\n"
+                f"{input_text}\n"
+                "Reply with 'yes', 'no', or 'not sure'."
+            )
+            
             response = self.clients["groq"].chat.completions.create(
                 model=model_name,
-                messages=[{
-                    "role": "user",
-                    "content": f"{instruction}\n{input_text}\nReply with 'yes', 'no', or 'not sure'."
-                }],
+                messages=[{"role": "user", "content": prompt}],
                 temperature=0
             )
             return {

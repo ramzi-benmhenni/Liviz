@@ -8,7 +8,7 @@ import argparse
 templates = {
     "en": {
         "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-        "input": "Is {ingredient} compatible with a {diet} diet?",
+        "input": "Is {ingredient} compatible with a {diet} diet? Diet Description: {diet_description}",
         "diet_names": {
             "vegan": "vegan",
             "vegetarian": "vegetarian", 
@@ -18,7 +18,7 @@ templates = {
     },
     "fr": {
         "instruction": "Vérifiez si cet ingrédient est compatible avec le régime alimentaire spécifié. Si non compatible ou incertain, expliquez pourquoi.",
-        "input": "{ingredient} compatible avec régime {diet}?",
+        "input": "{ingredient} compatible avec régime {diet}?  Diet Description: {diet_description}",
         "diet_names": {
             "vegan": "végétalien",
             "vegetarian": "végétarien",
@@ -28,7 +28,7 @@ templates = {
     },
     "ar": {
         "instruction": "تحقق مما إذا كان هذا المكون متوافقًا مع النظام الغذائي المحدد. إذا لم يكن متوافقًا أو غير مؤكد، اشرح السبب.",
-        "input": "{ingredient} متوافق مع نظام {diet}؟",
+        "input": "{ingredient} متوافق مع نظام {diet} {diet_description}؟",
         "diet_names": {
             "vegan": "نباتي",
             "vegetarian": "نباتي",
@@ -219,14 +219,23 @@ def get_reason(ingredient: str, diet: str, status: str, ingredients_db: Dict) ->
             return reason
     return reasons['0']["default"]
 
+def load_diets_config():
+    """Load diet descriptions from diets.json"""
+    try:
+        with open('diets.json', 'r', encoding='utf-8') as f:
+            diets = json.load(f)
+            return {diet["key"]: diet for diet in diets}
+    except Exception as e:
+        print(f"Error loading diets.json: {e}")
+        return {}
+
 def generate_dataset(ingredients_db: Dict, num_samples: int = None) -> List[Dict]:
     """
     Génère le dataset d'entraînement multilingue
-    
-    Args:
-        ingredients_db: Dictionnaire des ingrédients
-        num_samples: Nombre d'échantillons à générer. Si None, traite tous les ingrédients
     """
+    # Charger les configurations des régimes
+    diets_config = load_diets_config()
+    
     dataset = []
     diets = ["vegan", "vegetarian", "halal", "gluten_free"]
     ingredients = list(ingredients_db.keys())
@@ -282,7 +291,8 @@ def generate_dataset(ingredients_db: Dict, num_samples: int = None) -> List[Dict
                         "instruction": templates[lang]["instruction"],
                         "input": templates[lang]["input"].format(
                             ingredient=ingredient_name,
-                            diet=templates[lang]["diet_names"][diet]
+                            diet=templates[lang]["diet_names"][diet],
+                            diet_description=diets_config[diet]["taskcmd"] if diet in diets_config else ""
                         ),
                         "output": response,
                         "language": lang

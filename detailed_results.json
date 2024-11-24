@@ -1,31 +1,9 @@
 {
-  "total_tested": 6,
-  "agreement": 2,
+  "total_tested": 20,
+  "agreement": 13,
   "detailed_results": [
     {
-      "question": "Is 2% or less alkali compatible with a vegan diet?",
-      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-      "true_answer": "yes",
-      "model_responses": {
-        "gpt-4": "yes",
-        "gpt-4-turbo": "yes",
-        "gemini-pro": "no",
-        "llama-70b": "no"
-      }
-    },
-    {
-      "question": "Is 2% or less alkali compatible with a vegetarian diet?",
-      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-      "true_answer": "yes",
-      "model_responses": {
-        "gpt-4": "yes",
-        "gpt-4-turbo": "yes",
-        "gemini-pro": "no",
-        "llama-70b": "no"
-      }
-    },
-    {
-      "question": "Is 2% or less alkali compatible with a halal diet?",
+      "question": "Is 2% or less alkali compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "yes",
       "model_responses": {
@@ -36,52 +14,305 @@
       }
     },
     {
-      "question": "Is alcohol compatible with a halal diet?",
+      "question": "Is 2% or less alkali compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-      "true_answer": "no",
+      "true_answer": "yes",
       "model_responses": {
-        "gpt-4": "no",
-        "gpt-4-turbo": "no",
-        "gemini-pro": "no",
-        "llama-70b": "no"
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "yes",
+        "llama-70b": "yes"
       }
     },
     {
-      "question": "Is allergen information: contains milk compatible with a vegan diet?",
+      "question": "Is 2% or less alkali compatible with a halal diet? Diet Description: For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications.",
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-      "true_answer": "no",
+      "true_answer": "yes",
       "model_responses": {
-        "gpt-4": "no",
-        "gpt-4-turbo": "no",
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
         "gemini-pro": "no",
-        "llama-70b": "no"
+        "llama-70b": "yes"
       }
     },
     {
-      "question": "Is azodicarbonamide compatible with a vegan diet?",
+      "question": "Is 2% or less of alkali compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-      "true_answer": "no",
+      "true_answer": "yes",
       "model_responses": {
         "gpt-4": "yes",
         "gpt-4-turbo": "yes",
         "gemini-pro": "no",
         "llama-70b": "no"
       }
+    },
+    {
+      "question": "Is 2% or less of alkali compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "yes",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is 2% or less of alkali compatible with a halal diet? Diet Description: For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is acetic acid compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "yes",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is acetic acid compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "yes",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is acetic acid compatible with a halal diet? Diet Description: For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is acetylated distarch adipate compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "yes",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "yes"
+      }
+    },
+    {
+      "question": "Is alcohol compatible with a halal diet? Diet Description: For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is allergen information: contains milk compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is azodicarbonamide compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "yes",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is beef compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is beef compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is beef 14% compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is beef 14% compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is beef steak compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is belgian white chocolate compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
+    },
+    {
+      "question": "Is bone phosphate compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+      "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+      "true_answer": "no",
+      "model_responses": {
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
+      }
     }
   ],
   "agreement_analysis": {
-    "total_agreements": 2,
-    "correct_agreements": 2,
+    "total_agreements": 13,
+    "correct_agreements": 13,
     "agreement_cases": [
       {
-        "question": "Is alcohol compatible with a halal diet?",
+        "question": "Is 2% or less alkali compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "yes",
+        "true_answer": "yes",
+        "is_correct": true
+      },
+      {
+        "question": "Is 2% or less of alkali compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "yes",
+        "true_answer": "yes",
+        "is_correct": true
+      },
+      {
+        "question": "Is acetic acid compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "yes",
+        "true_answer": "yes",
+        "is_correct": true
+      },
+      {
+        "question": "Is acetic acid compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "yes",
+        "true_answer": "yes",
+        "is_correct": true
+      },
+      {
+        "question": "Is alcohol compatible with a halal diet? Diet Description: For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications.",
         "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
         "unanimous_response": "no",
         "true_answer": "no",
         "is_correct": true
       },
       {
-        "question": "Is allergen information: contains milk compatible with a vegan diet?",
+        "question": "Is allergen information: contains milk compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is beef compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is beef compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is beef 14% compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is beef 14% compatible with a vegetarian diet? Diet Description: For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is beef steak compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is belgian white chocolate compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
+        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
+        "unanimous_response": "no",
+        "true_answer": "no",
+        "is_correct": true
+      },
+      {
+        "question": "Is bone phosphate compatible with a vegan diet? Diet Description: For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients.",
         "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
         "unanimous_response": "no",
         "true_answer": "no",
@@ -89,42 +320,42 @@
       }
     ],
     "agreement_accuracy": 100.0,
-    "agreement_percentage": 33.33333333333333
+    "agreement_percentage": 65.0
   },
   "gpt-4": {
-    "correct": 5,
-    "total": 6,
+    "correct": 19,
+    "total": 20,
     "responses": {
-      "yes": 4,
-      "no": 2,
+      "yes": 11,
+      "no": 9,
       "not_sure": 0
     },
     "model_name": "gpt-4",
     "total_tokens": {
-      "input": 316,
-      "output": 6
+      "input": 2389,
+      "output": 20
     }
   },
   "gpt-4-turbo": {
-    "correct": 5,
-    "total": 6,
+    "correct": 18,
+    "total": 20,
     "responses": {
-      "yes": 4,
-      "no": 2,
+      "yes": 10,
+      "no": 10,
       "not_sure": 0
     },
     "model_name": "gpt-4-0125-preview",
     "total_tokens": {
-      "input": 316,
-      "output": 6
+      "input": 2389,
+      "output": 21
     }
   },
   "gemini-pro": {
-    "correct": 3,
-    "total": 6,
+    "correct": 13,
+    "total": 20,
     "responses": {
-      "yes": 0,
-      "no": 6,
+      "yes": 5,
+      "no": 15,
       "not_sure": 0
     },
     "model_name": "gemini-pro",
@@ -134,17 +365,17 @@
     }
   },
   "llama-70b": {
-    "correct": 4,
-    "total": 6,
+    "correct": 19,
+    "total": 20,
     "responses": {
-      "yes": 1,
-      "no": 5,
+      "yes": 9,
+      "no": 11,
       "not_sure": 0
     },
     "model_name": "llama3-70b-8192",
     "total_tokens": {
-      "input": 334,
-      "output": 431
+      "input": 2448,
+      "output": 363
     }
   }
 }

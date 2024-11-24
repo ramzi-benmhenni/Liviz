@@ -1,0 +1,272 @@
+[
+    {
+      "key": "vegan",
+      "name": "Vegan",
+      "description": "A diet that excludes all animal products and by-products.",
+      "taskcmd": "For vegan compliance: Determine if each ingredient comes from any animal source whatsoever. Remember that vegan products must not contain any animal-derived ingredients."
+    },
+    {
+      "key": "sesame_free",
+      "name": "Sesame Free",
+      "description": "A diet that excludes sesame seeds and products containing sesame seeds.",
+      "taskcmd": "For Sesame Free compliance: Verify that the ingredient does not contain sesame seeds or any derivatives of sesame seeds."
+    },
+    {
+      "key": "seafood_free",
+      "name": "Seafood-Free",
+      "description": "A diet that avoids all types of seafood and seafood products.",
+      "taskcmd": "For Seafood-Free compliance: Ensure that the ingredient is not derived from any type of seafood."
+    },
+    {
+      "key": "whole30",
+      "name": "Whole30",
+      "description": "A 30-day diet that eliminates sugar, alcohol, grains, legumes, soy, dairy, and additives from the diet.",
+      "taskcmd": "For Whole30 compliance: Ensure the ingredient is not sugar, alcohol, grains, legumes, soy, dairy, or contains any artificial additives."
+    },
+    {
+      "key": "peanut_free",
+      "name": "Peanut-Free",
+      "description": "A diet that excludes peanuts and peanut products.",
+      "taskcmd": "For Peanut-Free compliance: Check that the ingredient does not include peanuts or peanut-derived substances."
+    },
+    {
+      "key": "soy_free",
+      "name": "Soy-Free",
+      "description": "A diet that excludes soy and soy-derived products.",
+      "taskcmd": "For Soy-Free compliance: Confirm that the ingredient does not contain soy or any soy-derived components."
+    },
+    {
+      "key": "vegetarian",
+      "name": "Vegetarian",
+      "description": "A diet that excludes meat and fish, but may include dairy and eggs.",
+      "taskcmd": "For vegetarian compliance: Validate that the ingredient doesn't come from the body of an animal (like meat or fish). However, ingredients derived from living animals, like dairy or eggs, may be considered acceptable."
+    },
+    {
+      "key": "paleo",
+      "name": "Paleo",
+      "description": "A diet based on foods similar to what might have been eaten during the Paleolithic era.",
+      "taskcmd": "For Paleo compliance: Ensure ingredients resemble foods available during the Paleolithic era. This typically excludes dairy, grains, and legumes."
+    },
+    {
+      "key": "ketogenic",
+      "name": "Ketogenic",
+      "description": "A diet that is high in fat, adequate in protein and low in carbohydrates.",
+      "taskcmd": "For Ketogenic compliance: Ingredients should be high in fats, moderate in proteins, and very low in carbohydrates."
+    },
+    {
+      "key": "halal",
+      "name": "Halal",
+      "description": "Foods that are permissible according to Islamic law.",
+      "taskcmd": "For halal compliance: Actively look for ingredients that are strictly forbidden in a halal diet, per info fishs are halal, such as any form of alcohol in consumable products, as well as pork and its derivatives. If there's uncertainty regarding the halal status of a meat ingredient or if it lacks a clear halal certification, consider the product non-halal. However, if alcohol appears in a product that's clearly not meant for ingestion (e.g., hand sanitizers, cosmetics), it can be viewed as compliant. Always give preference to clear labeling and certain indications."
+    },
+    {
+      "key": "low_carb",
+      "name": "Low Carb",
+      "description": "A diet that restricts carbohydrates, such as those found in sugary foods, pasta and bread.",
+      "taskcmd": "For Low Carb compliance: Ensure ingredients are low in carbohydrates, especially avoiding refined and sugary sources."
+    },
+    {
+      "key": "dash",
+      "name": "DASH",
+      "description": "A diet to lower high blood pressure, emphasizes fruits, vegetables, whole grains, lean proteins and low-fat dairy.",
+      "taskcmd": "For DASH compliance: Prioritize ingredients like fruits, vegetables, whole grains, and lean proteins, while minimizing salt/sodium content."
+    },
+    {
+      "key": "atkins",
+      "name": "Atkins",
+      "description": "A low-carb diet that involves reducing carbohydrate intake while increasing protein and fat consumption.",
+      "taskcmd": "For Atkins compliance: Emphasize ingredients high in proteins and fats, while ensuring very low carbohydrate content."
+    },
+    {
+      "key": "zone",
+      "name": "Zone",
+      "description": "A diet aiming to maintain hormonal balance by consuming a certain proportion of protein, carbs, and fat at each meal (30% protein, 40% carbs, 30% fat).",
+      "taskcmd": "For Zone compliance: Ingredients should roughly follow the 30-40-30 (protein-carb-fat) rule."
+    },
+    {
+      "key": "south_beach",
+      "name": "South Beach",
+      "description": "A diet that distinguishes between 'good' and 'bad' carbs and fats and encourages eating more of the former and less of the latter.",
+      "taskcmd": "For South Beach compliance: Emphasize ingredients that are considered 'good' carbohydrates and fats, while minimizing 'bad' sources."
+    },
+    {
+      "key": "raw",
+      "name": "Raw",
+      "description": "A diet based on eating non-cooked and often organic foods.",
+      "taskcmd": "For Raw compliance: Ensure ingredients are uncooked and, if possible, organic."
+    },
+    {
+      "key": "whole30",
+      "name": "Whole30",
+      "description": "A diet that eliminates sugar, alcohol, grains, legumes, dairy, and food additives for 30 days.",
+      "taskcmd": "For Whole30 compliance: Exclude ingredients like sugars, alcohols, grains, legumes, dairy, and any food additives."
+    },
+    {
+      "key": "ayurvedic",
+      "name": "Ayurvedic",
+      "description": "A customized diet based on Ayurveda, a traditional form of Indian medicine.",
+      "taskcmd": "For Ayurvedic compliance: Ensure ingredients match the individual's dosha (Vata, Pitta, Kapha) and are in line with Ayurvedic principles."
+    },
+    {
+      "key": "fodmap",
+      "name": "FODMAP",
+      "description": "A diet for people with Irritable Bowel Syndrome (IBS) that involves eliminating foods rich in fermentable sugars.",
+      "taskcmd": "For FODMAP compliance: Exclude ingredients high in fermentable sugars and known to trigger IBS symptoms."
+    },
+    {
+      "key": "carnivore",
+      "name": "Carnivore",
+      "description": "A diet based on eating meats and excludes all other types of foods.",
+      "taskcmd": "For Carnivore compliance: Prioritize meat-based ingredients and exclude all non-animal sources."
+    },
+    {
+      "key": "gluten_free",
+      "name": "Gluten Free",
+      "description": "A diet that excludes the protein gluten, found in grains such as wheat, barley and rye.",
+      "taskcmd": "For Gluten Free compliance: Ensure no ingredients contain gluten or are derived from sources containing gluten, such as wheat, barley, and rye."
+    },
+    {
+      "key": "mediterranean",
+      "name": "Mediterranean",
+      "description": "A diet inspired by the eating habits of the Mediterranean area, emphasizing fruit, vegetables, fish, and olive oil.",
+      "taskcmd": "For Mediterranean compliance: Ingredients should be fresh, favoring fruits, vegetables, fish, whole grains, and healthy fats like olive oil."
+    },
+    {
+      "key": "flexitarian",
+      "name": "Flexitarian",
+      "description": "A mostly vegetarian diet that allows for occasional meat or fish.",
+      "taskcmd": "For Flexitarian compliance: Ingredients should be predominantly plant-based, allowing occasional inclusion of meats or fish."
+    },
+    {
+      "key": "low_fodmap",
+      "name": "Low FODMAP",
+      "description": "A diet that restricts certain types of carbohydrates that are 'Fermentable Oligo-, Di-, Mono-saccharides And Polyols'.",
+      "taskcmd": "For Low FODMAP compliance: Exclude or limit ingredients that are high in fermentable carbs known as FODMAPs, often triggers for IBS symptoms."
+    },
+    {
+      "key": "military",
+      "name": "Military",
+      "description": "A diet plan that claims you can lose up to 10 pounds in a week.",
+      "taskcmd": "For Military compliance: Ensure a combination of chemically compatible foods designed for rapid weight loss, often involving strict caloric restriction."
+    },
+    {
+      "key": "pescatarian",
+      "name": "Pescatarian",
+      "description": "A diet that includes fish and seafood but excludes other types of meat.",
+      "taskcmd": "For Pescatarian compliance: Include fish and seafood-based ingredients and ensure no other types of meat are present."
+    },
+    {
+      "key": "macrobiotic",
+      "name": "Macrobiotic",
+      "description": "A diet that emphasizes locally-grown, organic whole foods and discourages processed foods and certain animal products.",
+      "taskcmd": "For Macrobiotic compliance: Prioritize locally-grown, organic whole foods and avoid processed or refined foods and specific animal products."
+    },
+    {
+      "key": "intermittent_fasting",
+      "name": "Intermittent Fasting",
+      "description": "An eating pattern where you cycle between periods of eating and fasting.",
+      "taskcmd": "For Intermittent Fasting compliance: This isn't specific to ingredient types but rather the timing and duration of consumption. Ensure adherence to the fasting and eating windows."
+    },
+    {
+      "key": "mind",
+      "name": "MIND",
+      "description": "A diet designed to prevent cognitive decline, combining elements of the Mediterranean and DASH diets.",
+      "taskcmd": "For MIND compliance: Include brain-healthy foods like leafy greens, nuts, berries, beans, whole grains, fish, poultry, olive oil, and wine while avoiding red meats, butter, cheese, pastries, and sweets."
+    },
+    {
+      "key": "scarsdale",
+      "name": "Scarsdale",
+      "description": "A high-protein, low-carbohydrate mix with two weeks of strict eating followed by two weeks of more relaxed eating.",
+      "taskcmd": "For Scarsdale compliance: Emphasize high protein, low carb ingredients, and ensure strict adherence to the two-week phases of the diet."
+    },
+    {
+      "key": "dukandiet",
+      "name": "Dukan Diet",
+      "description": "A high-protein, low-fat, low-carbohydrate diet.",
+      "taskcmd": "For Dukan Diet compliance: Prioritize high-protein ingredients, and minimize fats and carbs. The diet also involves phases, so ensure ingredients align with the correct phase."
+    },
+    {
+      "key": "ultra_low_fat",
+      "name": "Ultra Low Fat",
+      "description": "A diet that consists of less than 10% of calories from fat.",
+      "taskcmd": "For Ultra Low Fat compliance: Ensure ingredients result in meals where less than 10% of the total caloric intake comes from fats."
+    },
+    {
+      "key": "zero_carb",
+      "name": "Zero Carb",
+      "description": "A very low-carb diet, mainly consisting of meats, fish, eggs, and animal fats.",
+      "taskcmd": "For Zero Carb compliance: Prioritize animal-based ingredients and ensure the complete absence of carbs."
+    },
+    {
+      "key": "liquid",
+      "name": "Liquid",
+      "description": "A diet in which all food intake is in liquid form.",
+      "taskcmd": "For Liquid Diet compliance: Ensure all ingredients can be consumed in liquid form, avoiding solid foods."
+    },
+    {
+      "key": "dairy_free",
+      "name": "Dairy Free",
+      "description": "A diet that excludes dairy products.",
+      "taskcmd": "For Dairy Free compliance: Ensure no ingredients come from milk or any milk derivatives like butter, cheese, yogurt, etc."
+    },
+    {
+      "key": "kosher",
+      "name": "Kosher",
+      "description": "Food that satisfies the requirements of Jewish dietary law.",
+      "taskcmd": "For kosher compliance: Check the ingredients against Jewish dietary laws. If any ingredient is forbidden, mark the product as non-compliant. If there's uncertainty or ambiguity about any ingredient, assume the product is non-kosher. If you can't determine the product type, use the context to make a judgment."
+    },
+    {
+      "key": "low_sodium",
+      "name": "Low Sodium",
+      "description": "A diet that includes foods low in sodium and high in potassium.",
+      "taskcmd": "For Low Sodium compliance: Prioritize ingredients with minimal salt or sodium content and ensure higher potassium ingredients."
+    },
+    {
+      "key": "intermittent_fasting",
+      "name": "Intermittent Fasting",
+      "description": "An eating pattern that cycles between periods of fasting and eating.",
+      "taskcmd": "For Intermittent Fasting compliance: While not ingredient-specific, ensure the timing and duration of consumption adheres to the fasting and eating windows."
+    },
+    {
+      "key": "macrobiotic",
+      "name": "Macrobiotic",
+      "description": "A diet based on ideas about types of food drawn from Zen Buddhism.",
+      "taskcmd": "For Macrobiotic compliance: Ensure ingredients promote balance and are mostly whole grains, vegetables, and beans, avoiding highly processed or refined foods."
+    },
+    {
+      "key": "sugar_free",
+      "name": "Sugar Free",
+      "description": "A diet that excludes all types of sugar.",
+      "taskcmd": "For Sugar Free compliance: Avoid all ingredients that contain natural or artificial sugars."
+    },
+    {
+      "key": "low_glycemic",
+      "name": "Low Glycemic",
+      "description": "A diet that consists of foods that have a low Glycemic Index.",
+      "taskcmd": "For Low Glycemic compliance: Prioritize ingredients that have a low Glycemic Index, ensuring minimal blood sugar spikes."
+    },
+    {
+      "key": "low_fat",
+      "name": "Low Fat",
+      "description": "A diet that restricts fat and often saturated fat and dietary cholesterol.",
+      "taskcmd": "For Low Fat compliance: Opt for ingredients with minimal fats, especially saturated fats and cholesterol."
+    },
+    {
+      "key": "juice_cleanse",
+      "name": "Juice Cleanse",
+      "description": "A diet where only fruit and vegetable juices are consumed for a certain period of time.",
+      "taskcmd": "For Juice Cleanse compliance: Ensure ingredients can be juiced, avoiding any solid foods."
+    },
+    {
+      "key": "high_protein",
+      "name": "High Protein",
+      "description": "A diet where high amounts of protein are consumed.",
+      "taskcmd": "For High Protein compliance: Prioritize ingredients rich in protein such as meats, legumes, dairy, etc."
+    },
+    {
+      "key": "clean_eating",
+      "name": "Clean Eating",
+      "description": "A diet that involves eating whole foods in their most natural state.",
+      "taskcmd": "For Clean Eating compliance: Choose only whole and unprocessed ingredients, avoiding additives, preservatives, and artificial substances."
+    }
+  ]
