@@ -2,7 +2,7 @@ colab/
 __pycache__/
 
 # Fichiers Python
-*.py
+
 
 
 # Fichiers de configuration avec clés API
@@ -14,7 +14,7 @@ config.py
 
 # Fichiers de données
 *.jsonl
-api_data.json
+
 
 # Autres
 .DS_Store
