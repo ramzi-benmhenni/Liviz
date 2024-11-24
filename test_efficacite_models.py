@@ -19,7 +19,7 @@ GROQ_API_KEY = API_KEYS["GROQ_API_KEY"]
 ANTHROPIC_API_KEY = API_KEYS["ANTHROPIC_API_KEY"]
 
 # Délai entre les requêtes (en secondes)
-REQUEST_DELAY = 2   
+REQUEST_DELAY = 1
 
 def load_diets_config():
 
@@ -209,15 +209,15 @@ class ModelTester:
 
 
 
-        self.last_request_time = {
+        self.last_request_time = {}
 
 
 
-            config["rate_limit_key"]: 0 for config in self.enabled_models.values()
+        for model_key, config in self.enabled_models.items():
 
 
 
-        }
+            self.last_request_time[config["type"]] = 0
 
 
 
@@ -301,6 +301,18 @@ class ModelTester:
 
 
 
+        if model not in self.last_request_time:
+
+
+
+            self.last_request_time[model] = 0
+
+
+
+        
+
+
+
         time_since_last_request = current_time - self.last_request_time[model]
 
 
@@ -369,6 +381,10 @@ class ModelTester:
 
 
 
+                print(f"Error details: {response.get('error_details', 'No error details available')}")
+
+
+
                 if attempt < self.max_retries - 1:
 
 
@@ -389,7 +405,15 @@ class ModelTester:
 
 
 
-                print(f"\n{model.upper()} Error (attempt {attempt + 1}/{self.max_retries}): {e}")
+                print(f"\n{model.upper()} Error (attempt {attempt + 1}/{self.max_retries})")
+
+
+
+                print(f"Error type: {type(e).__name__}")
+
+
+
+                print(f"Error details: {str(e)}")
 
 
 
