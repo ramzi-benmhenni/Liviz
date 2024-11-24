@@ -122,24 +122,33 @@ REASONS = {
 def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
     """
     Convertit les données de l'API en dictionnaire structuré
-    Ne garde que les ingrédients avec au moins un régime validé manuellement par l'utilisateur
+    Ne garde que les ingrédients avec des régimes validés manuellement par l'utilisateur
+    (userValidation = true et matchValidation = false ou non existant)
     """
     ingredients_db = {}
+    # Compteurs pour les statistiques par régime
+    regime_counts = {
+        "vegan": 0,
+        "vegetarian": 0,
+        "halal": 0,
+        "gluten_free": 0
+    }
     
     for ingredient in api_data:
         name = ingredient["name"]
         translations = ingredient.get("translations", [])
         
-        # Vérifier si l'ingrédient a au moins un régime validé manuellement
         has_validated_regime = False
         regimes = {}
         
         for regime in ingredient.get("regimes", []):
             regime_type = regime["type"]
             if regime_type in ["vegan", "vegetarian", "halal", "gluten_free"]:
-                # Ne prendre que les régimes validés manuellement par l'utilisateur
-                if (regime.get("userValidation", True) and 
-                    not regime.get("matchValidation", True)):  # Ajout de cette condition
+                # Vérifie si userValidation est True et si matchValidation est False ou n'existe pas
+                user_validation = regime.get("userValidation", False)
+                match_validation = regime.get("matchValidation")
+                
+                if user_validation and (match_validation is None or match_validation is False):
                     has_validated_regime = True
                     status = regime.get("status")
                     status_str = str(status) if status is not None else None
@@ -148,16 +157,21 @@ def load_ingredients_from_api(api_data: List[Dict]) -> Dict:
                         "status": status_str,
                         "validated": True
                     }
+                    # Incrémenter le compteur pour ce régime
+                    regime_counts[regime_type] += 1
         
-        # N'ajouter l'ingrédient que s'il a au moins un régime validé manuellement
         if has_validated_regime:
             ingredients_db[name] = {
                 "translations": translations,
                 "regimes": regimes
             }
     
+    print(f"\nStatistiques de validation:")
     print(f"Nombre total d'ingrédients dans l'API: {len(api_data)}")
-    print(f"Nombre d'ingrédients avec régimes validés manuellement: {len(ingredients_db)}")
+    print(f"Nombre d'ingrédients avec au moins un régime validé manuellement: {len(ingredients_db)}")
+    print("\nNombre d'ingrédients validés par régime:")
+    for regime, count in regime_counts.items():
+        print(f"- {regime}: {count} ingrédients")
     
     return ingredients_db
 
