@@ -1,91 +1,30 @@
 import json
-
-
-
 import os
-
-
-
 import google.generativeai as genai
-
-
-
 from typing import Dict, List
-
-
-
 from openai import OpenAI
-
-
-
 from groq import Groq
-
-
-
 from tqdm import tqdm
-
-
-
 from config import API_KEYS
-
-
-
 import asyncio
-
-
-
 import time
-
-
-
-
-
-
+import anthropic
+from anthropic import Anthropic
 
 # Configuration des clés API
 
-
-
 OPENAI_API_KEY = API_KEYS["OPENAI_API_KEY"]
-
-
-
 GOOGLE_API_KEY = API_KEYS["GOOGLE_API_KEY"]
-
-
-
 GROQ_API_KEY = API_KEYS["GROQ_API_KEY"]
-
-
-
-
-
-
+ANTHROPIC_API_KEY = API_KEYS["ANTHROPIC_API_KEY"]
 
 # Délai entre les requêtes (en secondes)
-
-
-
-REQUEST_DELAY = 1   
-
-
-
-
-
-
+REQUEST_DELAY = 2   
 
 def load_diets_config():
 
-
-
     """Load diet descriptions from diets.json"""
-
-
-
     try:
-
-
-
         with open('diets.json', 'r', encoding='utf-8') as f:
 
 
@@ -335,6 +274,14 @@ class ModelTester:
 
 
                 self.clients["groq"] = Groq(api_key=API_KEYS[model_config["client_key"]])
+
+
+
+            elif model_config["type"] == "anthropic" and "anthropic" not in self.clients:
+
+
+
+                self.clients["anthropic"] = Anthropic(api_key=API_KEYS[model_config["client_key"]])
 
 
 
@@ -866,6 +813,194 @@ class ModelTester:
 
 
 
+    async def query_claude(self, instruction: str, input_text: str, model: str) -> dict:
+
+
+
+        """Query Claude API"""
+
+
+
+        await self.wait_for_rate_limit("claude")
+
+
+
+        try:
+
+
+
+            # Extract diet from input text
+
+
+
+            diet_name = input_text.split("diet?")[0].strip().split()[-1]
+
+
+
+            diet_description = self.diets_config.get(diet_name, "")
+
+
+
+            
+
+
+
+            # Add diet description to the prompt
+
+
+
+            prompt = (
+
+
+
+                f"{instruction}\n"
+
+
+
+                f"Diet Description: {diet_description}\n"
+
+
+
+                f"{input_text}\n"
+
+
+
+                "Reply with one of these numbers:\n"
+
+
+
+                "1 for compatible (yes)\n"
+
+
+
+                "0 for not compatible (no)\n"
+
+
+
+                "2 for uncertain"
+
+
+
+            )
+
+
+
+            
+
+
+
+            # Créer le message pour Claude
+
+
+
+            response = self.clients["anthropic"].messages.create(
+
+
+
+                model=model,
+
+
+
+                max_tokens=1024,
+
+
+
+                messages=[
+
+
+
+                    {
+
+
+
+                        "role": "user",
+
+
+
+                        "content": prompt
+
+
+
+                    }
+
+
+
+                ],
+
+
+
+                temperature=0
+
+
+
+            )
+
+
+
+            
+
+
+
+            # Extraire la réponse
+
+
+
+            response_text = response.content[0].text if response.content else ""
+
+
+
+            
+
+
+
+            return {
+
+
+
+                "response": self.clean_response(response_text),
+
+
+
+                "model": model,
+
+
+
+                "tokens": {
+
+
+
+                    "input": getattr(response.usage, 'input_tokens', 0),
+
+
+
+                    "output": getattr(response.usage, 'output_tokens', 0)
+
+
+
+                }
+
+
+
+            }
+
+
+
+        except Exception as e:
+
+
+
+            print(f"Claude Error: {str(e)}")
+
+
+
+            return {"response": "error", "model": model, "tokens": {"input": 0, "output": 0}}
+
+
+
+
+
+
+
     def clean_response(self, response: str) -> str:
 
 
@@ -1073,7 +1208,6 @@ class ModelTester:
             "diet": example.get("diet", "N/A")
 
 
-
         }
 
 
@@ -1182,7 +1316,11 @@ class ModelTester:
 
 
 
-            "groq": self.query_groq
+            "groq": self.query_groq,
+
+
+
+            "anthropic": self.query_claude
 
 
 
@@ -1235,7 +1373,6 @@ class ModelTester:
 
 
             if "status" in ex and ex["status"] in ["0", "1", "2"]:
-                print(f"Status found: {ex['status']}")
 
 
                 filtered_examples.append(ex)
@@ -1883,84 +2020,34 @@ class ModelTester:
 
                 })
 
-
-
-        
-
-
-
         # Calculer les pourcentages
-
-
 
         total = results["total"]
 
-
-
         if total > 0:
-
-
 
             accuracy = (results["correct"] / total) * 100
 
-
-
             error_rate = (results["errors"] / total) * 100
-
-
 
             incorrect_rate = (results["incorrect"] / total) * 100
 
-
-
-            
-
-
-
             print(f"\nRésultats pour {model_name}:")
-
-
 
             print(f"Total des tests: {total}")
 
-
-
             print(f"Réponses correctes: {results['correct']} ({accuracy:.1f}%)")
-
-
 
             print(f"Réponses incorrectes: {results['incorrect']} ({incorrect_rate:.1f}%)")
 
-
-
             print(f"Erreurs: {results['errors']} ({error_rate:.1f}%)")
-
-
-
-        
-
-
 
         return results
 
-
-
-
-
-
-
 if __name__ == "__main__":
 
-
-
     import asyncio
-
-
-
-    
-
-
-
+ 
     async def main():
 
 
@@ -1971,67 +2058,23 @@ if __name__ == "__main__":
 
         start_time = time.time()
 
-
-
-        
-
-
-
         tester = ModelTester()
-
-
 
         await tester.run_tests("training_data_en_filtered.jsonl")
 
-
-
-        
-
-
-
         # Sauvegarder les résultats en JSON
-
-
-
         tester.save_results("detailed_results.json")
 
-
-
-        
-
-
-
         # Afficher les statistiques globales
-
-
-
         tester.print_results()
-
-
-
-        
-
-
 
         end_time = time.time()
 
-
-
         total_time = end_time - start_time
-
-
 
         print(f"\nTemps total d'exécution: {total_time:.2f} secondes")
 
-
-
         print(f"Les résultats ont été sauvegardés dans 'detailed_results.json'")
-
-
-
-
-
-
 
     asyncio.run(main()) 
 

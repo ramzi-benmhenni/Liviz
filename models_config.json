@@ -4,6 +4,22 @@
         "model_name": "gpt-4",
         "client_key": "OPENAI_API_KEY",
         "rate_limit_key": "gpt",
+        "enabled": false,
+        "temperature": 0
+    },
+    "claude-3": {
+        "type": "anthropic",
+        "model_name": "claude-3-5-sonnet-20241022",
+        "client_key": "ANTHROPIC_API_KEY",
+        "rate_limit_key": "claude",
+        "enabled": true,
+        "temperature": 0
+    },
+    "claude-3-haiku": {
+        "type": "anthropic",
+        "model_name": "claude-3-5-haiku-20241022",
+        "client_key": "ANTHROPIC_API_KEY",
+        "rate_limit_key": "claude",
         "enabled": true,
         "temperature": 0
     },
@@ -44,7 +60,7 @@
         "model_name": "mixtral-8x7b-32768",
         "client_key": "GROQ_API_KEY",
         "rate_limit_key": "mixtral",
-        "enabled": true,
+        "enabled": false,
         "temperature": 0
     }
 } 

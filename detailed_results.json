@@ -8,6 +8,8 @@
       "true_answer": "1",
       "model_responses": {
         "gpt-4": "1",
+        "claude-3": "1",
+        "claude-3-haiku": "2",
         "gpt-4-turbo": "1",
         "GPT-4omini": "1",
         "llama-70b": "0",
@@ -22,6 +24,8 @@
       "true_answer": "1",
       "model_responses": {
         "gpt-4": "1",
+        "claude-3": "2",
+        "claude-3-haiku": "1",
         "gpt-4-turbo": "1",
         "GPT-4omini": "1",
         "llama-70b": "0",
@@ -36,6 +40,8 @@
       "true_answer": "0",
       "model_responses": {
         "gpt-4": "0",
+        "claude-3": "0",
+        "claude-3-haiku": "0",
         "gpt-4-turbo": "0",
         "GPT-4omini": "0",
         "llama-70b": "1",
@@ -50,6 +56,8 @@
       "true_answer": "0",
       "model_responses": {
         "gpt-4": "0",
+        "claude-3": "0",
+        "claude-3-haiku": "0",
         "gpt-4-turbo": "0",
         "GPT-4omini": "0",
         "llama-70b": "1",
@@ -64,9 +72,11 @@
       "true_answer": "2",
       "model_responses": {
         "gpt-4": "1",
+        "claude-3": "2",
+        "claude-3-haiku": "2",
         "gpt-4-turbo": "0",
         "GPT-4omini": "0",
-        "llama-70b": "2",
+        "llama-70b": "0",
         "mixtral-8x7b-32768": "0"
       },
       "ingredient_id": "N/A",
@@ -78,6 +88,8 @@
       "true_answer": "2",
       "model_responses": {
         "gpt-4": "1",
+        "claude-3": "2",
+        "claude-3-haiku": "2",
         "gpt-4-turbo": "1",
         "GPT-4omini": "1",
         "llama-70b": "0",
@@ -103,6 +115,34 @@
       "2": 0
     },
     "model_name": "gpt-4",
+    "total_tokens": {
+      "input": 0,
+      "output": 0
+    }
+  },
+  "claude-3": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "0": 2,
+      "1": 1,
+      "2": 3
+    },
+    "model_name": "claude-3-5-sonnet-20241022",
+    "total_tokens": {
+      "input": 0,
+      "output": 0
+    }
+  },
+  "claude-3-haiku": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "0": 2,
+      "1": 1,
+      "2": 3
+    },
+    "model_name": "claude-3-5-haiku-20241022",
     "total_tokens": {
       "input": 0,
       "output": 0
@@ -137,12 +177,12 @@
     }
   },
   "llama-70b": {
-    "correct": 1,
+    "correct": 0,
     "total": 6,
     "responses": {
-      "0": 3,
+      "0": 4,
       "1": 2,
-      "2": 1
+      "2": 0
     },
     "model_name": "llama3-70b-8192",
     "total_tokens": {
