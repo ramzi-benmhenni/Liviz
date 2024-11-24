@@ -38,5 +38,13 @@
         "rate_limit_key": "groq",
         "enabled": true,
         "temperature": 0
+    },
+    "mixtral-8x7b-32768": {
+        "type": "groq",
+        "model_name": "mixtral-8x7b-32768",
+        "client_key": "GROQ_API_KEY",
+        "rate_limit_key": "mixtral",
+        "enabled": true,
+        "temperature": 0
     }
 } 
