@@ -18,22 +18,22 @@ GROQ_API_KEY = API_KEYS["GROQ_API_KEY"]
 REQUEST_DELAY = 3   
 
 class ModelTester:
-    def __init__(self):
-        # Initialisation des clients API
-        self.openai_client = OpenAI(api_key=OPENAI_API_KEY)
-        # Commenter Gemini
-        genai.configure(api_key=GOOGLE_API_KEY)
-        self.gemini_model = genai.GenerativeModel('gemini-pro')
-        self.groq_client = Groq(api_key=GROQ_API_KEY)
+    def __init__(self, models_config_path="models_config.json"):
+        # Charger la configuration des modèles
+        with open(models_config_path, 'r') as f:
+            self.models_config = json.load(f)
+        
+        # Filtrer les modèles activés
+        self.enabled_models = {k: v for k, v in self.models_config.items() if v.get("enabled", True)}
+        
+        # Initialiser les clients
+        self.clients = {}
+        self.initialize_clients()
         
         # Pour stocker les résultats
         self.results = {
-            "gpt": {"correct": 0, "total": 0, "responses": {"yes": 0, "no": 0, "not_sure": 0}, "model_name": "", "total_tokens": {"input": 0, "output": 0}},
-            "gpt4": {"correct": 0, "total": 0, "responses": {"yes": 0, "no": 0, "not_sure": 0}, "model_name": "", "total_tokens": {"input": 0, "output": 0}},
-            "gemini": {"correct": 0, "total": 0, "responses": {"yes": 0, "no": 0, "not_sure": 0}, "model_name": "", "total_tokens": {"input": 0, "output": 0}},
-            "groq": {"correct": 0, "total": 0, "responses": {"yes": 0, "no": 0, "not_sure": 0}, "model_name": "", "total_tokens": {"input": 0, "output": 0}},
-            "agreement": 0,
             "total_tested": 0,
+            "agreement": 0,
             "detailed_results": [],
             "agreement_analysis": {
                 "total_agreements": 0,
@@ -42,16 +42,34 @@ class ModelTester:
             }
         }
         
+        # Initialiser les résultats pour chaque modèle activé
+        for model_key in self.enabled_models:
+            self.results[model_key] = {
+                "correct": 0,
+                "total": 0,
+                "responses": {"yes": 0, "no": 0, "not_sure": 0},
+                "model_name": self.enabled_models[model_key]["model_name"],
+                "total_tokens": {"input": 0, "output": 0}
+            }
+        
         # Pour gérer les délais entre requêtes
         self.last_request_time = {
-            "gpt": 0,
-            "gemini": 0,  # commenté
-            "groq": 2
+            config["rate_limit_key"]: 0 for config in self.enabled_models.values()
         }
 
-        # Ajout des paramètres de retry
         self.max_retries = 3
-        self.retry_delay = 10  # délai de 10 secondes entre les retries
+        self.retry_delay = 10
+
+    def initialize_clients(self):
+        """Initialise les clients API pour les modèles activés"""
+        for model_config in self.enabled_models.values():
+            if model_config["type"] == "openai" and "openai" not in self.clients:
+                self.clients["openai"] = OpenAI(api_key=API_KEYS[model_config["client_key"]])
+            elif model_config["type"] == "gemini" and "gemini" not in self.clients:
+                genai.configure(api_key=API_KEYS[model_config["client_key"]])
+                self.clients["gemini"] = genai.GenerativeModel('gemini-pro')
+            elif model_config["type"] == "groq" and "groq" not in self.clients:
+                self.clients["groq"] = Groq(api_key=API_KEYS[model_config["client_key"]])
 
     async def wait_for_rate_limit(self, model: str):
         """Attend le délai nécessaire entre les requêtes"""
@@ -64,18 +82,16 @@ class ModelTester:
         
         self.last_request_time[model] = time.time()
 
-    async def retry_query(self, model: str, query_func, instruction: str, input_text: str,model_name: str) -> str:
-        """
-        Réessaie une requête en cas d'erreur avec un délai d'attente
-        """
+    async def retry_query(self, model: str, query_func, instruction: str, input_text: str, model_name: str) -> dict:
+        """Modifié pour gérer correctement les retours"""
         for attempt in range(self.max_retries):
             try:
-                response = await query_func(instruction, input_text,model_name)
-                if response != "error":
+                response = await query_func(instruction, input_text, model_name)
+                if response["response"] != "error":
                     return response
                 
                 print(f"\n{model.upper()} Error (attempt {attempt + 1}/{self.max_retries})")
-                if attempt < self.max_retries - 1:  # Ne pas attendre après la dernière tentative
+                if attempt < self.max_retries - 1:
                     print(f"Waiting {self.retry_delay} seconds before retrying...")
                     await asyncio.sleep(self.retry_delay)
                 
@@ -85,12 +101,13 @@ class ModelTester:
                     print(f"Waiting {self.retry_delay} seconds before retrying...")
                     await asyncio.sleep(self.retry_delay)
         
-        return "error"
+        return {"response": "error", "model": model_name, "tokens": {"input": 0, "output": 0}}
 
-    async def query_gpt(self, instruction: str, input_text: str, model: str = "gpt-4") -> tuple:
+    async def query_gpt(self, instruction: str, input_text: str, model: str) -> dict:
+        """Modifié pour utiliser le client depuis self.clients"""
         await self.wait_for_rate_limit("gpt")
         try:
-            response = self.openai_client.chat.completions.create(
+            response = self.clients["openai"].chat.completions.create(
                 model=model,
                 messages=[{
                     "role": "user",
@@ -107,29 +124,30 @@ class ModelTester:
                 }
             }
         except Exception as e:
+            print(f"OpenAI Error: {str(e)}")
             return {"response": "error", "model": model, "tokens": {"input": 0, "output": 0}}
 
-    async def query_gemini(self, instruction: str, input_text: str, model_name: str) -> tuple:
+    async def query_gemini(self, instruction: str, input_text: str, model_name: str) -> dict:
+        """Modifié pour utiliser le client depuis self.clients"""
         await self.wait_for_rate_limit("gemini")
         try:
-            response = self.gemini_model.generate_content(
+            response = self.clients["gemini"].generate_content(
                 f"{instruction}\n{input_text}\nReply with 'yes', 'no', or 'not sure'."
             )
             return {
                 "response": self.clean_response(response.text),
                 "model": "gemini-pro",
-                "tokens": {
-                    "input": 0,  # Gemini n'expose pas directement le compte de tokens
-                    "output": 0
-                }
+                "tokens": {"input": 0, "output": 0}
             }
         except Exception as e:
+            print(f"Gemini Error: {str(e)}")
             return {"response": "error", "model": model_name, "tokens": {"input": 0, "output": 0}}
 
-    async def query_groq(self, instruction: str, input_text: str, model_name: str) -> tuple:
+    async def query_groq(self, instruction: str, input_text: str, model_name: str) -> dict:
+        """Modifié pour utiliser le client depuis self.clients"""
         await self.wait_for_rate_limit("groq")
         try:
-            response = self.groq_client.chat.completions.create(
+            response = self.clients["groq"].chat.completions.create(
                 model=model_name,
                 messages=[{
                     "role": "user",
@@ -146,6 +164,7 @@ class ModelTester:
                 }
             }
         except Exception as e:
+            print(f"Groq Error: {str(e)}")
             return {"response": "error", "model": model_name, "tokens": {"input": 0, "output": 0}}
 
     def clean_response(self, response: str) -> str:
@@ -163,17 +182,18 @@ class ModelTester:
         return len(valid_responses) > 1 and len(set(valid_responses)) == 1
 
     async def test_single_example(self, example: Dict) -> None:
-        """Teste un seul exemple sur tous les modèles"""
         expected = example["output"].lower().strip()
-        
         self.results["total_tested"] += 1
 
-        responses = {
-            "gpt": await self.retry_query("gpt", self.query_gpt, example["instruction"], example["input"], "gpt-4"),
-            "gpt4": await self.retry_query("gpt4", self.query_gpt, example["instruction"], example["input"], "gpt-4-0125-preview"),
-            "gemini": await self.retry_query("gemini", self.query_gemini, example["instruction"], example["input"], "gemini-pro"),
-            "groq": await self.retry_query("groq", self.query_groq, example["instruction"], example["input"], "llama3-70b-8192")
-        }
+        responses = {}
+        for model_key, model_config in self.enabled_models.items():
+            responses[model_key] = await self.retry_query(
+                model_config["rate_limit_key"],
+                self.get_query_function(model_config["type"]),
+                example["instruction"],
+                example["input"],
+                model_config["model_name"]
+            )
 
         # Stocker les résultats détaillés
         detailed_result = {
@@ -202,15 +222,23 @@ class ModelTester:
             })
 
         # Mettre à jour les statistiques par modèle
-        for model, response_data in responses.items():
+        for model_key, response_data in responses.items():
             if response_data["response"] != "error":
-                self.results[model]["total"] += 1
-                self.results[model]["responses"][response_data["response"]] += 1
-                self.results[model]["model_name"] = response_data["model"]
-                self.results[model]["total_tokens"]["input"] += response_data["tokens"]["input"]
-                self.results[model]["total_tokens"]["output"] += response_data["tokens"]["output"]
+                self.results[model_key]["total"] += 1
+                self.results[model_key]["responses"][response_data["response"]] += 1
+                self.results[model_key]["total_tokens"]["input"] += response_data["tokens"]["input"]
+                self.results[model_key]["total_tokens"]["output"] += response_data["tokens"]["output"]
                 if response_data["response"] in ["yes", "no"] and response_data["response"] == expected:
-                    self.results[model]["correct"] += 1
+                    self.results[model_key]["correct"] += 1
+
+    def get_query_function(self, model_type: str):
+        """Retourne la fonction de requête appropriée pour le type de modèle"""
+        query_functions = {
+            "openai": self.query_gpt,
+            "gemini": self.query_gemini,
+            "groq": self.query_groq
+        }
+        return query_functions.get(model_type)
 
     async def run_tests(self, dataset_path: str):
         """Exécute les tests sur tout le dataset"""
@@ -246,17 +274,17 @@ class ModelTester:
         print("\nRésultats par modèle:")
         print("-" * 50)
         
-        for model in ["gpt", "gpt4", "groq", "gemini"]:
-            total = self.results[model]["total"]
+        for model_key in self.enabled_models:
+            total = self.results[model_key]["total"]
             if total > 0:
-                accuracy = (self.results[model]["correct"] / total) * 100
-                print(f"\n{model.upper()}:")
-                print(f"Modèle utilisé: {self.results[model]['model_name']}")
+                accuracy = (self.results[model_key]["correct"] / total) * 100
+                print(f"\n{model_key.upper()}:")
+                print(f"Modèle utilisé: {self.results[model_key]['model_name']}")
                 print(f"Précision: {accuracy:.1f}%")
                 print(f"Nombre total de réponses: {total}")
-                print(f"Tokens totaux: Input: {self.results[model]['total_tokens']['input']}, Output: {self.results[model]['total_tokens']['output']}")
+                print(f"Tokens totaux: Input: {self.results[model_key]['total_tokens']['input']}, Output: {self.results[model_key]['total_tokens']['output']}")
                 print("Distribution des réponses:")
-                for response_type, count in self.results[model]["responses"].items():
+                for response_type, count in self.results[model_key]["responses"].items():
                     percentage = (count / total) * 100 if total > 0 else 0
                     print(f"  - {response_type}: {count} ({percentage:.1f}%)")
                 print("-" * 50)

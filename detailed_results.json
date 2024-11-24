@@ -1,72 +1,16 @@
 {
-  "gpt": {
-    "correct": 5,
-    "total": 6,
-    "responses": {
-      "yes": 4,
-      "no": 2,
-      "not_sure": 0
-    },
-    "model_name": "gpt-4-0613",
-    "total_tokens": {
-      "input": 316,
-      "output": 6
-    }
-  },
-  "gpt4": {
-    "correct": 5,
-    "total": 6,
-    "responses": {
-      "yes": 4,
-      "no": 2,
-      "not_sure": 0
-    },
-    "model_name": "gpt-4-0125-preview",
-    "total_tokens": {
-      "input": 316,
-      "output": 6
-    }
-  },
-  "gemini": {
-    "correct": 4,
-    "total": 6,
-    "responses": {
-      "yes": 1,
-      "no": 5,
-      "not_sure": 0
-    },
-    "model_name": "gemini-pro",
-    "total_tokens": {
-      "input": 0,
-      "output": 0
-    }
-  },
-  "groq": {
-    "correct": 5,
-    "total": 6,
-    "responses": {
-      "yes": 2,
-      "no": 4,
-      "not_sure": 0
-    },
-    "model_name": "llama3-70b-8192",
-    "total_tokens": {
-      "input": 334,
-      "output": 271
-    }
-  },
-  "agreement": 3,
   "total_tested": 6,
+  "agreement": 2,
   "detailed_results": [
     {
       "question": "Is 2% or less alkali compatible with a vegan diet?",
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "yes",
       "model_responses": {
-        "gpt": "yes",
-        "gpt4": "yes",
-        "gemini": "no",
-        "groq": "no"
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "no"
       }
     },
     {
@@ -74,10 +18,10 @@
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "yes",
       "model_responses": {
-        "gpt": "yes",
-        "gpt4": "yes",
-        "gemini": "no",
-        "groq": "yes"
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "no"
       }
     },
     {
@@ -85,10 +29,10 @@
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "yes",
       "model_responses": {
-        "gpt": "yes",
-        "gpt4": "yes",
-        "gemini": "yes",
-        "groq": "yes"
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "yes"
       }
     },
     {
@@ -96,10 +40,10 @@
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "no",
       "model_responses": {
-        "gpt": "no",
-        "gpt4": "no",
-        "gemini": "no",
-        "groq": "no"
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
       }
     },
     {
@@ -107,10 +51,10 @@
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "no",
       "model_responses": {
-        "gpt": "no",
-        "gpt4": "no",
-        "gemini": "no",
-        "groq": "no"
+        "gpt-4": "no",
+        "gpt-4-turbo": "no",
+        "gemini-pro": "no",
+        "llama-70b": "no"
       }
     },
     {
@@ -118,24 +62,17 @@
       "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
       "true_answer": "no",
       "model_responses": {
-        "gpt": "yes",
-        "gpt4": "yes",
-        "gemini": "no",
-        "groq": "no"
+        "gpt-4": "yes",
+        "gpt-4-turbo": "yes",
+        "gemini-pro": "no",
+        "llama-70b": "no"
       }
     }
   ],
   "agreement_analysis": {
-    "total_agreements": 3,
-    "correct_agreements": 3,
+    "total_agreements": 2,
+    "correct_agreements": 2,
     "agreement_cases": [
-      {
-        "question": "Is 2% or less alkali compatible with a halal diet?",
-        "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
-        "unanimous_response": "yes",
-        "true_answer": "yes",
-        "is_correct": true
-      },
       {
         "question": "Is alcohol compatible with a halal diet?",
         "instruction": "Check if this ingredient is compatible with the specified diet. If not compatible or uncertain, explain why.",
@@ -152,6 +89,62 @@
       }
     ],
     "agreement_accuracy": 100.0,
-    "agreement_percentage": 50.0
+    "agreement_percentage": 33.33333333333333
+  },
+  "gpt-4": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "yes": 4,
+      "no": 2,
+      "not_sure": 0
+    },
+    "model_name": "gpt-4",
+    "total_tokens": {
+      "input": 316,
+      "output": 6
+    }
+  },
+  "gpt-4-turbo": {
+    "correct": 5,
+    "total": 6,
+    "responses": {
+      "yes": 4,
+      "no": 2,
+      "not_sure": 0
+    },
+    "model_name": "gpt-4-0125-preview",
+    "total_tokens": {
+      "input": 316,
+      "output": 6
+    }
+  },
+  "gemini-pro": {
+    "correct": 3,
+    "total": 6,
+    "responses": {
+      "yes": 0,
+      "no": 6,
+      "not_sure": 0
+    },
+    "model_name": "gemini-pro",
+    "total_tokens": {
+      "input": 0,
+      "output": 0
+    }
+  },
+  "llama-70b": {
+    "correct": 4,
+    "total": 6,
+    "responses": {
+      "yes": 1,
+      "no": 5,
+      "not_sure": 0
+    },
+    "model_name": "llama3-70b-8192",
+    "total_tokens": {
+      "input": 334,
+      "output": 431
+    }
   }
 }

@@ -1,0 +1,34 @@
+{
+    "gpt-4": {
+        "type": "openai",
+        "model_name": "gpt-4",
+        "client_key": "OPENAI_API_KEY",
+        "rate_limit_key": "gpt",
+        "enabled": true,
+        "temperature": 0
+    },
+    "gpt-4-turbo": {
+        "type": "openai",
+        "model_name": "gpt-4-0125-preview",
+        "client_key": "OPENAI_API_KEY",
+        "rate_limit_key": "gpt4",
+        "enabled": true,
+        "temperature": 0
+    },
+    "gemini-pro": {
+        "type": "gemini",
+        "model_name": "gemini-pro",
+        "client_key": "GOOGLE_API_KEY",
+        "rate_limit_key": "gemini",
+        "enabled": true,
+        "temperature": 0
+    },
+    "llama-70b": {
+        "type": "groq",
+        "model_name": "llama3-70b-8192",
+        "client_key": "GROQ_API_KEY",
+        "rate_limit_key": "groq",
+        "enabled": true,
+        "temperature": 0
+    }
+} 
