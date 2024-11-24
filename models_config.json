@@ -15,12 +15,20 @@
         "enabled": true,
         "temperature": 0
     },
+    "GPT-4omini": {
+        "type": "openai",
+        "model_name": "gpt-4o-mini",
+        "client_key": "OPENAI_API_KEY",
+        "rate_limit_key": "gpt4mini",
+        "enabled": true,
+        "temperature": 0
+    },
     "gemini-pro": {
         "type": "gemini",
         "model_name": "gemini-pro",
         "client_key": "GOOGLE_API_KEY",
         "rate_limit_key": "gemini",
-        "enabled": true,
+        "enabled": false,
         "temperature": 0
     },
     "llama-70b": {
