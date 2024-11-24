@@ -11,7 +11,7 @@ def clean_response(output: str) -> str:
         output: La réponse à nettoyer
         
     Returns:
-        'yes', 'no' ou None
+        'yes', 'no', 'not sure' ou None
     """
     output = output.lower().strip()
     
@@ -19,9 +19,9 @@ def clean_response(output: str) -> str:
     if output == "yes":
         return "yes"
     
-    # Ignorer les "not sure"
-    if "not sure" in output:
-        return None
+    # Cas pour "not sure"
+    if output.startswith("not sure"):
+        return "not sure"
     
     # Cas pour "no" avec explication
     if output.startswith("no"):
@@ -29,23 +29,26 @@ def clean_response(output: str) -> str:
         
     return None
 
-def filter_yes_no_answers(input_file: str, output_file: str, max_yes: int = 0, max_no: int = 0) -> None:
+def filter_yes_no_answers(input_file: str, output_file: str, max_yes: int = 0, max_no: int = 0, max_not_sure: int = 0) -> None:
     """
-    Filtre le fichier JSONL pour ne garder que les exemples avec des réponses 'yes' ou 'no'
+    Filtre le fichier JSONL pour ne garder que les exemples avec des réponses 'yes', 'no' ou 'not sure'
     
     Args:
         input_file: Chemin du fichier d'entrée
         output_file: Chemin du fichier de sortie
         max_yes: Nombre maximum de réponses 'yes' à garder (0 = illimité)
         max_no: Nombre maximum de réponses 'no' à garder (0 = illimité)
+        max_not_sure: Nombre maximum de réponses 'not sure' à garder (0 = illimité)
     """
     filtered_data: List[Dict] = []
     total_count = 0
     yes_count = 0
     no_count = 0
+    not_sure_count = 0
     
     yes_entries = []
     no_entries = []
+    not_sure_entries = []
     
     # Lecture du fichier d'entrée
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -60,22 +63,27 @@ def filter_yes_no_answers(input_file: str, output_file: str, max_yes: int = 0, m
                 new_entry = entry.copy()
                 new_entry["output"] = clean_output
                 
-                # Séparer les entrées yes et no
+                # Séparer les entrées selon leur type
                 if clean_output == "yes":
                     yes_entries.append(new_entry)
-                else:
+                elif clean_output == "no":
                     no_entries.append(new_entry)
+                else:  # not sure
+                    not_sure_entries.append(new_entry)
     
     # Limiter le nombre d'entrées si nécessaire
     if max_yes > 0:
         yes_entries = yes_entries[:max_yes]
     if max_no > 0:
         no_entries = no_entries[:max_no]
+    if max_not_sure > 0:
+        not_sure_entries = not_sure_entries[:max_not_sure]
     
     # Combiner les entrées
-    filtered_data = yes_entries + no_entries
+    filtered_data = yes_entries + no_entries + not_sure_entries
     yes_count = len(yes_entries)
     no_count = len(no_entries)
+    not_sure_count = len(not_sure_entries)
     
     # Sauvegarde des données filtrées
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -89,6 +97,7 @@ def filter_yes_no_answers(input_file: str, output_file: str, max_yes: int = 0, m
     print(f"Exemples conservés: {len(filtered_data)}")
     print(f"  - Réponses 'yes': {yes_count}")
     print(f"  - Réponses 'no': {no_count}")
+    print(f"  - Réponses 'not sure': {not_sure_count}")
     print(f"Pourcentage conservé: {(len(filtered_data)/total_count)*100:.1f}%")
     
     # Afficher quelques exemples
@@ -102,13 +111,19 @@ def filter_yes_no_answers(input_file: str, output_file: str, max_yes: int = 0, m
         print("\nExemple de 'no':")
         print(f"Question: {no_entries[0]['input']}")
         print(f"Réponse: {no_entries[0]['output']}")
+        
+    if not_sure_entries:
+        print("\nExemple de 'not sure':")
+        print(f"Question: {not_sure_entries[0]['input']}")
+        print(f"Réponse: {not_sure_entries[0]['output']}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Filtre les questions avec réponses yes/no')
+    parser = argparse.ArgumentParser(description='Filtre les questions avec réponses yes/no/not sure')
     parser.add_argument('--input', default="training_data_en.jsonl", help='Fichier d\'entrée')
     parser.add_argument('--output', default="training_data_en_filtered.jsonl", help='Fichier de sortie')
     parser.add_argument('--max_yes', type=int, default=0, help='Nombre maximum de réponses yes (0 = illimité)')
     parser.add_argument('--max_no', type=int, default=0, help='Nombre maximum de réponses no (0 = illimité)')
+    parser.add_argument('--max_not_sure', type=int, default=0, help='Nombre maximum de réponses not sure (0 = illimité)')
     
     args = parser.parse_args()
     
@@ -118,7 +133,7 @@ if __name__ == "__main__":
         exit(1)
     
     # Filtrer les données
-    filter_yes_no_answers(args.input, args.output, args.max_yes, args.max_no)
+    filter_yes_no_answers(args.input, args.output, args.max_yes, args.max_no, args.max_not_sure)
     
     # Confirmer la création du nouveau fichier
     if Path(args.output).exists():
